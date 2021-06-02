@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Some CDN Start -->
+<head>
+    <!-- <title></title> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+
+    <!-- Normal HTML -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<!-- End CDN -->
+
+<body>
+    <!-- Main navigation -->
+    <header>
+        <!-- Style CSS Start -->
+        <style>
+            /* Required for full background image */
+
+            html,
+            body,
+            header,
+            #intro-section {
+                height: 100%;
+            }
+
+            @media (max-width: 740px) {
+
+                html,
+                body,
+                header,
+                #intro-section {
+                    height: 100vh;
+                }
+            }
+
+            .top-nav-collapse {
+                background-color: #0665b3 !important;
+            }
+
+            .navbar:not(.top-nav-collapse) {
+                background: transparent !important;
+            }
+
+            @media (max-width: 991px) {
+                .navbar:not(.top-nav-collapse) {
+                    background: #0665b3 !important;
+                }
+            }
+
+            .rgba-gradient {
+                background: -moz-linear-gradient(45deg, rgba(15, 238, 212, 0.767), rgba(13, 17, 198, 0.69) 100%);
+                background: -webkit-linear-gradient(45deg, rgba(15, 238, 212, 0.767), rgba(13, 17, 198, 0.69) 100%);
+                background: linear-gradient(45deg, rgba(15, 238, 212, 0.767), rgba(13, 17, 198, 0.69) 100%);
+            }
+
+
+            /* Time line start */
+
+            /* The actual timeline (the vertical ruler) */
+            .main-timeline-4 {
+                position: relative;
+            }
+
+            /* The actual timeline (the vertical ruler) */
+            .main-timeline-4::after {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background-color: gray;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+            /* Container around content */
+            .timeline-4 {
+                position: relative;
+                background-color: inherit;
+                width: 50%;
+            }
+
+            /* The circles on the timeline */
+            .timeline-4::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                right: -11px;
+                background-color: lightsteelblue;
+                top: 15px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            /* Place the container to the left */
+            .left-4 {
+                padding: 0px 40px 20px 0px;
+                left: 0;
+            }
+
+            /* Place the container to the right */
+            .right-4 {
+                padding: 0px 0px 20px 40px;
+                left: 50%;
+            }
+
+            /* Add arrows to the left container (pointing right) */
+            .left-4::before {
+                content: " ";
+                position: absolute;
+                top: 18px;
+                z-index: 1;
+                right: 30px;
+                border: medium solid rgb(1, 93, 250);
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent rgb(1, 93, 253);
+            }
+
+            /* Add arrows to the right container (pointing left) */
+            .right-4::before {
+                content: " ";
+                position: absolute;
+                top: 18px;
+                z-index: 1;
+                left: 30px;
+                border: medium solid red;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent red transparent transparent;
+            }
+
+            /* Fix the circle for containers on the right side */
+            .right-4::after {
+                left: -14px;
+            }
+
+            /* Media queries - Responsive timeline on screens less than 600px wide */
+            @media screen and (max-width: 600px) {
+
+                /* Place the timelime to the left */
+                .main-timeline-4::after {
+                    left: 31px;
+                }
+
+                /* Full-width containers */
+                .timeline-4 {
+                    width: 100%;
+                    padding-left: 70px;
+                    padding-right: 25px;
+                }
+
+                /* Make sure that all arrows are pointing leftwards */
+                .timeline-4::before {
+                    left: 60px;
+                    border: medium solid white;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent;
+                }
+
+                /* Make sure all circles are at the same spot */
+                .left-4::after,
+                .right-4::after {
+                    left: 18px;
+                }
+
+                .left-4::before {
+                    right: auto;
+                }
+
+                /* Make all right containers behave like the left ones */
+                .right-4 {
+                    left: 0%;
+                }
+            }
+
+            .gradient-custom {
+                /* fallback for old browsers */
+                background: blue;
+
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(45deg, rgb(56, 119, 172), blue 100%);
+
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(45deg, rgb(56, 119, 172), blue 100%);
+            }
+
+            .gradient-custom-4 {
+                /* fallback for old browsers */
+
+                background: orangered;
+                /* Chrome 10-25, Safari 5.1-6 */
+
+                background: -webkit-linear-gradient(45deg, orangered, lightcoral 100%);
+
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(45deg, orangered, lightcoral 100%);
+            }
+
+            /* time line end  */
+        </style>
+        <!-- Style CSS End -->
+
+        <!-- BODY PART OF HTML > -->
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">PORTFOLIO</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                    <!-- Element's -->
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="90">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Education" data-offset="90">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Technology" data-offset="90">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Project" data-offset="30">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-offset="90">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Social Icon  -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.google.com/">
+                                <i class="fab fa-google light-green-text-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-f light-green-text-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://twitter.com/?lang=en">
+                                <i class="fab fa-twitter light-green-text-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram light-green-text-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Full Page Intro -->
+        <div id="intro-section" class="view">
+
+            <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline
+        autoplay muted loop>
+        <source src="https://mdbootstrap.com/img/video/animation.mp4" type="video/mp4">
+      </video> -->
+
+            <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
+                <source class="h-100" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+            </video>
+
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+
+                <!-- Content -->
+                <div class="container px-md-3 px-sm-0">
+
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+
+                        <!--Grid column-->
+                        <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+
+                            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">Harish Pansari</h3>
+                            <hr class="hr-light my-4 w-75">
+                            <h4 class="subtext-header mt-2 mb-4">Hi, I am Harish, CSE Student at SRM-IST Delhi-NCR
+                                Campus, Ghaziabad.</h4>
+                            <p style="font-family: 'Dancing Script', cursive; font-size: 26px;">
+                                Nice To Meet You.
+                            </p>
+                            <a href="#about" class="btn btn-rounded btn-outline-white waves-effect">
+                                <i class="fas fa-home"></i> Checkout
+                            </a>
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+                <!-- Content -->
+
+            </div>
+            <!-- Mask & flexbox options-->
+
+        </div>
+        <!-- Full Page Intro -->
+
+    </header>
+
+    <!-- Main navigation about me -->
+
+    <section id="about" class="py-5" style="background-color: white">
+        <div class="container">
+
+            <!-- content -->
+            <div class="mt-4 pt-2">
+                <h1 class="text-center font-weight-bold mb-3" style="font-size: 40px;">About Me</h1>
+                <p class="text-center mb-4 pt-2" style="font-size: 25px;">Hey, I am Harish Pansari, Student of SRM
+                    Institute
+                    of Science and Technology. I am a keen learner who always like to explore and learning new things
+                    from everyone. </p>
+                <div class="container">
+                    <!-- Grid row -->
+                    <div class="row g-5">
+                        <!-- Grid col -->
+                        <div class="col-lg-6 py-2">
+                            <!-- Info -->
+                            <div class="mt-4 pt-2">
+                                <h4 class="font-weight-bold gray-text">Info</h4>
+                                <p style="font-size: 17px; font-family: 'Montserrat', sans-serif;">
+                                    I want to become a successful engineer with a best position in life.
+                                </p>
+                            </div>
+                            <!-- Objrctive -->
+                            <div class="mt-4 pt-2">
+                                <h4 class="font-weight-bold mb-3">Objective</h4>
+                                <p style="font-family: 'Montserrat', sans-serif; font-size: 17px;" class="mt-3 py-1">
+                                    My objective is to put my abilities and learning skills to create best new idea's.
+                                    That will give my contribution to for my career.
+
+                                </p>
+                            </div>
+                            <!-- Intrest -->
+                            <div class="mt-4 pt-2">
+                                <h4 class="font-weight-bold mb-3">Intrest</h4>
+                                <p style="font-family: 'Montserrat', sans-serif; font-size: 17px;" class="mt-3 py-1">
+                                    Web & App development, Creative think in Technology field, Gossip with friends,
+                                    Learning new things, Listening Music, Travelling, writing, Sports like cricket.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Grid col -->
+                        <!-- Grid col -->
+                        <div class="col-lg-6 py-2">
+                            <div class="col-md-11 mt-2 pt-2 ml-2">
+                                <!-- Card -->
+                                <div class="card">
+
+                                    <!-- Card image -->
+                                    <img class="card-img-top" class="bg-image hover-overlay ripple"
+                                        data-mdb-ripple-color="light" src="./image/otot.jpeg" alt="Card image cap">
+
+                                    <!-- Card content -->
+                                    <div class="card-body text-center">
+                                        <div class="mt-2">
+                                            <!-- Linkedin -->
+                                            <a class="btn" style="background-color: #feffff;"
+                                                href="https://www.linkedin.com/in/harish-pansari-9276731b9/"
+                                                role="button"><i class="fab fa-linkedin-in light-green-text-2"></i>
+                                            </a>
+                                            <!-- Github -->
+                                            <a class="btn" style="background-color: white" href="https://github.com"
+                                                role="button"><i class="fab fa-github light-green-text-2"></i>
+                                            </a>
+                                            <!-- Stack overflow -->
+                                            <a class="btn" style="background-color: white"
+                                                href="https://stackoverflow.com/" role="button"><i
+                                                    class="fab fa-stack-overflow light-green-text-2"></i>
+                                            </a>
+                                            <!-- slack  -->
+                                            <a class="btn" style="background-color: white"
+                                                href="https://slack.com/intl/en-in/"><i
+                                                    class="fab fa-slack light-green-text-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- card contect end -->
+
+                                </div>
+                                <!-- Card -->
+                            </div>
+                        </div>
+                        <!-- Grid col -->
+                    </div>
+                    <!-- grid row -->
+                </div>
+            </div>
+            <!-- content -->
+        </div>
+    </section>
+    <!-- about me end -->
+    <!-- Education -->
+    <section class="py-5" id="Education" style="background-color: white">
+        <!-- content -->
+        <div class="container">
+            <!-- heading -->
+            <div class="text-center section-heading mb-4">
+                <h2 class="font-weight-bold mt-2 pt-3" style="font-size: 40px;">Education</h2>
+            </div>
+            <!-- main content -->
+            <div class="container">
+                <!-- timelime start -->
+                <div class="main-timeline-4 text-white">
+                    <!-- Schooling st -->
+                    <div class="timeline-4 left-4">
+                        <div class="card gradient-custom">
+                            <div class="card-body p-4">
+                                <i class="fas fa-baby fa-2x mb-3"></i>
+                                <h4>2004 - 2019</h4>
+                                <p class="small text-white-50 mb-4">Schooling</p>
+                                <h5>
+                                    SHRI DURGA PRASAD DHAUNKA ADARSH VIDYA MANDIR
+                                </h5>
+                                <h6>
+                                    RATANGARH, CHURU <br>RAJASTHAN
+                                </h6>
+                                <p class="text-light">
+                                    RBSE - 85%
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Schooling End -->
+                    <!-- College st -->
+                    <div class="timeline-4 right-4">
+                        <div class="card gradient-custom-4">
+                            <div class="card-body p-4">
+                                <i class="fas fa-graduation-cap fa-2x mb-3"></i>
+                                <h4>2019 - 2023</h4>
+                                <p class="small text-white-50 mb-4">College</p>
+                                <h5>
+                                    SRM INSTITUTE OF SCIENCE AND TECHNOLOGY <br>DELHI-NCR CAMPUS
+                                </h5>
+                                <h6>
+                                    MODINAGAR, GHAZIABAD
+                                </h6>
+                                <P class="text-light">
+                                    COMPUTER SCIENCE AND TECHNOLOGY
+                                </P>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- College end -->
+                </div>
+                <!-- timelime -->
+            </div>
+            <!-- main content -->
+        </div>
+    </section>
+    <!-- Education End -->
+    <!-- Technology st -->
+    <section id="Technology" class="text-center py-4" style="background-color: white"></section>
+    <!-- heading -->
+    <div class="container">
+        <h2 class="text-center font-weight-bold py-4 mt-4" style="font-size: 40px;">Technology's Skills</h2>
+        <h3></h3>
+    </div>
+    <!-- content -->
+    <div class="container">
+        <!-- grid row -->
+        <div class="row text-center">
+            <!-- grid column -->
+            <div class="col-lg-3">
+                <img src="./image/c++.png" class="card-img-top" alt="image">
+                <div class="text-center mb-5">
+                    <h3 class="font-weight-bold pt-3">C++</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 pt-md-4">
+                <img src="./image/oinm.jpg" class="card-img-top" alt="image">
+                <div class="text-center mb-5 pt-5 mt-2">
+                    <h3 class="font-weight-bold pt-2">JAVA</h3>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <img src="./image/python.png" class="card-img-top" alt="image">
+                <div class="text-center mb-5">
+                    <h3 class="font-weight-bold pt-2 mt-1">PYTHON</h3>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <img src="./image/flutter.jpg" class="card-img-top" alt="image">
+                <div class="text-center mb-5">
+                    <h3 class="font-weight-bold pt-2">FLUTTER</h3>
+                </div>
+            </div>
+            <!-- grid column -->
+        </div>
+        <!-- grid row  -->
+    </div>
+    </section>
+    <!-- Technology End -->
+    <!-- Project's -->
+    <section class="text-center py-5" id="Project">
+        <div class="container mt-3 pt-2">
+            <!-- heading -->
+            <div class="mt-md-2 pt-2">
+                <h1 class="font-weight-bold" style="font-size: 40px;">Project's</h1>
+                <hr class="hr-dark my-4 w-100">
+            </div>
+            <div>
+                <!-- content -->
+                <div class="container">
+                    <!-- card row -->
+                    <div class="row text-center">
+                        <!-- card column -->
+                        <div class="col-md-4 pt-4">
+                            <div class="card">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img src="./image/TSP.jpg" class="img-fluid" />
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">GRIP-TSF</h5>
+                                    <a href="#/" class="btn btn-outline-primary waves-effect">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- col end -->
+                        <!-- card column -->
+                        <div class="col-md-4 pt-4">
+                            <div class="card">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img src="./image/OCR.jpg" class="img-fluid" />
+                                    <a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">EXTRACT</h5>
+                                    <a href="https://harishpansari.github.io/ExtractText/#"
+                                        class="btn btn-outline-primary waves-effect">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card row -->
+                </div>
+                <!-- content -->
+            </div>
+        </div>
+    </section>
+    <!-- Project End -->
+    <!--Section: Contact-->
+    <section class="text-center py-5" id="contact" style="background-color: whitesmoke;">
+        <div class="container">
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4 mb-3">Contact me</h2>
+            <!--Section description-->
+            <h6 class="text-center w-responsive mx-auto mb-5 mt-3">Do you have any questions? <br> Please do not
+                hesitate to
+                contact me.
+            </h6>
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="">Your name</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="">Your email</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" class="">Subject</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2"
+                                        class="form-control md-textarea"></textarea>
+                                    <label for="message">Your message</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                    </form>
+
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-outline-primary waves-effect">Send</a>
+                    </div>
+                    <div class="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p>SRM-IST, Delhi-NCR Campus, <br> Ghaziabad </p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                            <p>+91 79766 67006</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                            <p>harishpansari51@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+        </div>
+    </section>
+    <!--Section: Contact v.2-->
+
+    <!-- Footer start -->
+    <section>
+        <div>
+            <footer class="page-footer" style="background-color: #0665b3;">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center">
+                    <h6 class="mt-3 mb-3 ">© Harish Pansari</h6>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+        </div>
+    </section>
+    <!-- Footer End -->
+</body>
+</html>
