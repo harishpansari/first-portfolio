@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Some CDN Start -->
+
 <head>
     <!-- <title></title> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -603,68 +604,68 @@
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="my-formcarry">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                        <script src="https://carrier.formcarry.com/js/v1.js"></script>
-                        <!--Grid row-->
-                        <div class="row">
+                    <form id="my-formcarry" accept-charset="UTF-8" method="POST" name="contact-form" id="contact-form">
+                        <!-- <form id="contact-form" name="contact-form" action="mail.php" method="POST"> -->
+                            
+                            <!--Grid row-->
+                            <div class="row">
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Your name</label>
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <label for="name" class="">Your name</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control">
+                                        <label for="email" class="">Your email</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                            <!--Grid row-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control">
+                                        <label for="subject" class="">Subject</label>
+                                    </div>
                                 </div>
                             </div>
-                            <!--Grid column-->
+                            <!--Grid row-->
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Your email</label>
+                            <!--Grid row-->
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+
+                                    <div class="md-form">
+                                        <textarea type="text" id="message" name="message" rows="2"
+                                            class="form-control md-textarea"></textarea>
+                                        <label for="message">Your message</label>
+                                    </div>
+
                                 </div>
                             </div>
-                            <!--Grid column-->
+                            <!--Grid row-->
 
+                        <!-- </form> -->
+
+                        <div class="text-center text-md-left">
+                            <button class="btn btn-outline-primary waves-effect" type="Submit">Submit</button>
                         </div>
-                        <!--Grid row-->
-
-                        <!--Grid row-->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="subject" name="subject" class="form-control">
-                                    <label for="subject" class="">Subject</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid row-->
-
-                        <!--Grid row-->
-                        <div class="row">
-
-                            <!--Grid column-->
-                            <div class="col-md-12">
-
-                                <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2"
-                                        class="form-control md-textarea"></textarea>
-                                    <label for="message">Your message</label>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!--Grid row-->
-
-                    </form>
-
-                    <div class="text-center text-md-left">
-                        <a class="btn btn-outline-primary waves-effect">Send</a>
-                    </div>
-                    <div class="status"></div>
+                        <div class="status"></div>
                 </div>
-                    </form>
+                </form>
                 <!--Grid column-->
 
                 <!--Grid column-->
@@ -704,5 +705,35 @@
         </div>
     </section>
     <!-- Footer End -->
+
+    <!-- contect us js code -->
+
+    <script src="https://carrier.formcarry.com/js/v1.js"></script>
+    <script>
+        formcarry({
+            form: "_QOawxJDLTO",
+            // id or the class name of the form element, only form element allowed
+            // works with css selectors
+            // # <= for id
+            // . <= for class
+            element: "#my-formcarry",
+            extraData: {
+                // add whatever you want
+                screenSize: `${window.screen.width}x${window.screen.height}`,
+                language: window.navigator.language,
+            },
+            // Success callback, you can show alert messages
+            // or redirect the user in this function
+            onSuccess: function (response) {
+                alert(response)
+            },
+            // Error callback, a good place to show errors 🗿
+            onError: function (error) {
+                alert(error)
+            }
+        });
+    </script>
+<script src="https://carrier.formcarry.com/js/v1.js"></script>
 </body>
+
 </html>
